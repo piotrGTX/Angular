@@ -1,0 +1,9 @@
+<p> Local: {{ group.value | json }} </p>
+<p> Local: {{ group.status | json }} </p>
+<p> Local: {{ group.errors | json }} </p> 
+
+<form [formGroup]="group">
+  <app-text-input controlName="name" placeholder="Name" required></app-text-input>
+  <app-text-input controlName="surname" placeholder="Surname"></app-text-input>
+  <app-number-input controlName="age" placeholder="Age"></app-number-input>
+</form> 

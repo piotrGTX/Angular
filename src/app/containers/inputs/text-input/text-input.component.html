@@ -1,0 +1,6 @@
+<mat-form-field [formGroup]="formGroup">
+  <input matInput type="text" [formControlName]="controlName" [placeholder]="placeholder" />
+  <mat-error *ngFor="let error of errors">
+    {{ error }}
+  </mat-error>
+</mat-form-field> 

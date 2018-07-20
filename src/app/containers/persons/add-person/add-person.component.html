@@ -1,0 +1,24 @@
+<div class="container">
+
+  <p> Global: {{ group.value | json }} </p>
+  <p> Global: {{ group.status | json }} </p>
+  <p> Global: {{ group.errors | json }} </p>
+
+  <mat-horizontal-stepper [linear]="true">
+      <mat-step [stepControl]="basicGroup" label="Basic">
+        <app-basic-data [fullGroup]="group"></app-basic-data>
+        <app-mat-stepper-controller></app-mat-stepper-controller>
+      </mat-step>
+
+      <mat-step [stepControl]="addressGroup" label="Address">
+        <app-address-data [fullGroup]="group"></app-address-data>
+        <app-mat-stepper-controller></app-mat-stepper-controller>
+      </mat-step>
+
+      <mat-step label="Summary">
+        You are now done.
+        <app-mat-stepper-controller></app-mat-stepper-controller>
+      </mat-step>
+    </mat-horizontal-stepper>
+    
+</div>
